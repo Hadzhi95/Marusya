@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
+import {NavLink} from "react-router-dom"
+
 
 function Products() {
   const [data, setData] = useState([]);
@@ -71,9 +73,9 @@ function Products() {
                     <p className="card-text lead fw-bold">
                       ${product.price}
                     </p>
-                    <a href="#" className="btn btn-outline-dark">
+                    <NavLink to={`/products/${product.id}`} className="btn btn-outline-dark">
                       Buy Now
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -89,7 +91,7 @@ function Products() {
       <div className=" my-5 py-5">
         <div className="row">
           <div className="col-12 mb-5">
-            <h1 className="display-6 fw-bolder text-center">Latest Products</h1>
+            <h1 className="display-6 fw-bolder text-center">New Collection</h1>
             <hr />
           </div>
         </div>
